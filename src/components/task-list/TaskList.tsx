@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {ITaskListProps} from "./types/ITaskListProps";
 import {Task} from "../../model/Task";
+import TaskCloseButton from "../task-close-button/TaskCloseButton";
 
 class TaskList extends React.Component<ITaskListProps, {}> {
 
@@ -16,10 +17,10 @@ class TaskList extends React.Component<ITaskListProps, {}> {
 
     public renderTasks = () => {
         return this.props.tasks.map((task: Task, index: number) => {
-            console.log('In mapping tasks...', task.description);
             return (
                 <div key={index}>
                     { task.description } { task.id }
+                    <TaskCloseButton id={task.id}/>
                 </div>
             );
         });
