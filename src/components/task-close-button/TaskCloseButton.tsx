@@ -20,7 +20,7 @@ class TaskCloseButton extends React.Component<ITaskCloseButtonProps, {}> {
         )
     };
 
-    public onRemoveTask() {
+    public onRemoveTask = () => {
         this.props.onRemoveTask(this.props.id);
     }
 }
