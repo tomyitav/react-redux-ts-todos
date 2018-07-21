@@ -48,7 +48,6 @@ class Form extends React.Component<FormProps, FormState> {
 
 
     private inputChange = (e: any) => {
-        console.log('Got value: ', e.target.value);
         this.setState({
             currentTask: e.target.value,
         });
