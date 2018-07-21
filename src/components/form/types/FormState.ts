@@ -1,3 +1,4 @@
 export interface FormState {
-    currentTask: string
+    currentTask: string,
+    nextTaskId: number
 }

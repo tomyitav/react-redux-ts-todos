@@ -11,6 +11,7 @@ class Form extends React.Component<FormProps, FormState> {
         super(props, context);
         this.state = {
             currentTask: "",
+            nextTaskId: 0
         }
     }
 
@@ -27,9 +28,17 @@ class Form extends React.Component<FormProps, FormState> {
 
     private onAddTask() {
         this.props.onAddTask({
-            id: 1,
+            id: this.state.nextTaskId,
             description: this.state.currentTask
         });
+        this.updateStateOnSubmit();
+    }
+
+    private updateStateOnSubmit() {
+        this.setState({
+            currentTask: "",
+            nextTaskId: this.state.nextTaskId + 1
+        })
     }
 
     private handleSubmit = (e: React.FormEvent<HTMLFormElement>) :void => {
@@ -43,7 +52,6 @@ class Form extends React.Component<FormProps, FormState> {
         this.setState({
             currentTask: e.target.value,
         });
-        // console.log('state: ', this.state);
     }
 }
 

@@ -2,6 +2,7 @@ import * as React from 'react';
 import {ITaskCloseButtonProps} from "./types/ITaskCloseButtonProps";
 import {connect} from "react-redux";
 import {deleteTask} from "../../store/actions/task-actions";
+import {Button} from "react-bootstrap";
 
 class TaskCloseButton extends React.Component<ITaskCloseButtonProps, {}> {
 
@@ -16,7 +17,7 @@ class TaskCloseButton extends React.Component<ITaskCloseButtonProps, {}> {
 
     public render() {
         return (
-            <button className="primary" onClick={this.handleClick}>x</button>
+            <Button bsStyle="primary" onClick={this.handleClick}>x</Button>
         )
     };
 

@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootswatch": "^3.3.7",
     "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.3.1",
     "react-scripts-ts": "2.16.0",
     "redux": "^4.0.0"
   },
@@ -19,8 +23,11 @@
     "@types/jest": "^23.1.1",
     "@types/node": "^10.3.5",
     "@types/react": "^16.4.1",
+    "@types/react-bootstrap": "^0.32.11",
     "@types/react-dom": "^16.0.6",
     "@types/react-redux": "^6.0.3",
+    "@types/react-router-bootstrap": "^0.24.5",
+    "@types/react-router-dom": "^4.3.0",
     "typescript": "^2.9.2"
   }
 }

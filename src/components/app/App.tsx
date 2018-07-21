@@ -4,7 +4,7 @@ import './App.css';
 import TaskList from "../task-list/TaskList";
 import {IState} from "./types/IState";
 import {IProps} from "./types/IProps";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import {IAppState} from "../../store/AppStore";
 import Form from "../form/Form";
 
