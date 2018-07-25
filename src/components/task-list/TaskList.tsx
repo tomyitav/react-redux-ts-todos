@@ -13,7 +13,7 @@ class TaskList extends React.Component<ITaskListProps, {}> {
     public render() {
         return (
             <Grid>
-                <Table striped={true} bordered={true}>
+                <Table striped={true} bordered={true} hover={true}>
                     <thead>
                         <tr>
                             <th>task</th>

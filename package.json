@@ -1,5 +1,5 @@
 {
-  "name": "react-tutorial-1",
+  "name": "react-redux-ts-todos",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

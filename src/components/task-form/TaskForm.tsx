@@ -1,13 +1,13 @@
 import * as React from 'react';
-import './Form.css';
-import {FormState} from "./types/FormState";
+import './TaskForm.css';
+import {TaskFormState} from "./types/TaskFormState";
 import { addTask } from "../../store/actions/task-actions";
 import {connect} from "react-redux";
-import {FormProps} from "./types/FormProps";
+import {TaskFormProps} from "./types/TaskFormProps";
 
-class Form extends React.Component<FormProps, FormState> {
+class TaskForm extends React.Component<TaskFormProps, TaskFormState> {
 
-    constructor(props: FormProps, context: any) {
+    constructor(props: TaskFormProps, context: any) {
         super(props, context);
         this.state = {
             currentTask: "",
@@ -58,4 +58,4 @@ const mapActionsToProps = {
     onAddTask: addTask
 };
 
-export default connect(undefined, mapActionsToProps)(Form);
+export default connect(undefined, mapActionsToProps)(TaskForm);

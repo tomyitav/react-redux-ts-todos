@@ -1,4 +1,4 @@
-export interface FormState {
+export interface TaskFormState {
     currentTask: string,
     nextTaskId: number
 }

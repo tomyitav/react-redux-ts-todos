@@ -6,7 +6,8 @@ import {IState} from "./types/IState";
 import {IProps} from "./types/IProps";
 import {connect} from "react-redux";
 import {IAppState} from "../../store/AppStore";
-import Form from "../form/Form";
+import {default as TaskForm} from "../task-form/TaskForm";
+import NameForm from "../name-form/NameForm";
 
 class App extends React.Component<IProps, IState> {
 
@@ -17,8 +18,9 @@ class App extends React.Component<IProps, IState> {
     public render() {
         return (
             <div className="App">
-                <TodoHeader name="Tom"/>
-                <Form/>
+                <TodoHeader name={this.props.name}/>
+                <TaskForm/>
+                <NameForm/>
                 <TaskList tasks={this.props.tasks}/>
             </div>
         );
@@ -27,6 +29,7 @@ class App extends React.Component<IProps, IState> {
 
 const mapStateToProps = (state: IAppState) => ({
     tasks: state.tasks,
+    name: state.name.name
 })
 
 export default connect(mapStateToProps)(App);
