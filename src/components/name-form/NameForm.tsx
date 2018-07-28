@@ -4,6 +4,7 @@ import {NameFormState} from "./types/NameFormState";
 import {NameFormProps} from "./types/NameFormProps";
 import {setName} from "../../store/actions/name-actions";
 import {connect} from "react-redux";
+import {Button, Col, Grid, Row} from "react-bootstrap";
 
 class NameForm extends React.Component<NameFormProps, NameFormState> {
 
@@ -18,9 +19,17 @@ class NameForm extends React.Component<NameFormProps, NameFormState> {
     public render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Select your board name"
-                       onChange={this.inputChange} value={ this.state.currentName }/>
-                <button type="submit">Set name</button>
+                <Grid>
+                    <Row>
+                        <Col sm={6} xs={12}>
+                            <input className="form-input" type="text" placeholder="Select your board name"
+                               onChange={this.inputChange} value={ this.state.currentName }/>
+                        </Col>
+                        <Col sm={6} xs={12}>
+                            <Button bsStyle="info" type="submit">Set name</Button>
+                        </Col>
+                    </Row>
+                </Grid>
             </form>
             )
     }

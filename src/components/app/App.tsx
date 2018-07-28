@@ -20,7 +20,9 @@ class App extends React.Component<IProps, IState> {
             <div className="App">
                 <TodoHeader name={this.props.name}/>
                 <TaskForm/>
+                <br/>
                 <NameForm/>
+                <br/>
                 <TaskList tasks={this.props.tasks}/>
             </div>
         );

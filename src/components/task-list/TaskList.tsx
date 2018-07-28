@@ -3,6 +3,7 @@ import {ITaskListProps} from "./types/ITaskListProps";
 import {Task} from "../../model/Task";
 import TaskCloseButton from "../task-close-button/TaskCloseButton";
 import {Grid, Table} from "react-bootstrap";
+import TaskEditButton from "../task-edit-button/TaskEditButton";
 
 class TaskList extends React.Component<ITaskListProps, {}> {
 
@@ -33,7 +34,10 @@ class TaskList extends React.Component<ITaskListProps, {}> {
             return (
                 <tr key={index}>
                     <td>{ task.description }</td>
-                    <td><TaskCloseButton id={task.id}/></td>
+                    <td>
+                        <TaskEditButton id={task.id}/>
+                        <TaskCloseButton id={task.id}/>
+                    </td>
                 </tr>
             );
         });

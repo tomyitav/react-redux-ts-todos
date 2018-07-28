@@ -17,7 +17,7 @@ class TaskCloseButton extends React.Component<ITaskCloseButtonProps, {}> {
 
     public render() {
         return (
-            <Button bsStyle="primary" onClick={this.handleClick}>x</Button>
+            <Button bsStyle="danger" onClick={this.handleClick}>x</Button>
         )
     };
 

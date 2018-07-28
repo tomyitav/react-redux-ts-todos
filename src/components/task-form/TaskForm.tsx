@@ -4,6 +4,7 @@ import {TaskFormState} from "./types/TaskFormState";
 import { addTask } from "../../store/actions/task-actions";
 import {connect} from "react-redux";
 import {TaskFormProps} from "./types/TaskFormProps";
+import {Button, Col, Grid, Row} from "react-bootstrap";
 
 class TaskForm extends React.Component<TaskFormProps, TaskFormState> {
 
@@ -18,9 +19,17 @@ class TaskForm extends React.Component<TaskFormProps, TaskFormState> {
     public render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="add a task"
+                <Grid>
+                    <Row>
+                        <Col sm={6} xs={12}>
+                <input className="form-input" type="text" placeholder="add a task"
                        onChange={this.inputChange} value={ this.state.currentTask }/>
-                <button type="submit">Add task</button>
+                        </Col>
+                        <Col sm={6} xs={12}>
+                            <Button bsStyle="info" type="submit">Add task</Button>
+                        </Col>
+                    </Row>
+                </Grid>
             </form>
             )
     }
